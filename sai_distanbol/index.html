@@ -1,0 +1,474 @@
+<!doctype html>
+<html lang="en">
+ <head> 
+  <meta charset="utf-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> 
+  <meta name="description" content=""> 
+  <meta name="author" content=""> 
+  <link rel="icon" href="favicon.ico"> 
+  <title>Distanbol</title> 
+  <!-- Fundament core CSS --> 
+  <link href="./view/fundament/css/fundament.min.css" rel="stylesheet"> 
+  <link href="https://openlayers.org/en/v4.6.4/css/ol.css" rel="stylesheet"> 
+  <link href="./view/css/distanbol.css" rel="stylesheet"> 
+ </head> 
+ <body class="contained fixed-nav"> 
+  <nav class="navbar navbar-expand-md navbar-light fixed-top bg-white box-shadow"> 
+   <div class="container"> 
+    <a class="navbar-brand" href="/"> Distanbol </a> 
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button> 
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault"> 
+     <!--this part is for the navigation bar, which we dont have right now--> 
+     <!--<ul class="navbar-nav mr-auto">--> 
+     <!--<li class="nav-item active">--> 
+     <!--<a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>--> 
+     <!--</li>--> 
+     <!--</ul>--> 
+     <div class="navbar-icons"> 
+      <a href="https://github.com/acdh-oeaw/Distanbol" target="_blank" rel="noopener"> <i class="fab fa-github"></i> </a> 
+     </div> 
+    </div> 
+   </div> 
+  </nav> 
+  <!--<div id="search-overlay">--> 
+  <!--<div class="container">--> 
+  <!--<div id="search-overlay-cancel"><i class="fas fa-times"></i></div>--> 
+  <!--<form id="search-overlay-form" role="search" method="get" action="">--> 
+  <!--<a href="#" id="search-overlay-submit"><i class="fas fa-search"></i></a>--> 
+  <!--<input type="search" name="fullTextSearch" id="search-overlay-input" value="" placeholder="Search..." autocomplete="off">--> 
+  <!--</form>--> 
+  <!--</div>--> 
+  <!--</div>--> 
+  <main> 
+   <!-- Main jumbotron for a primary marketing message or call to action --> 
+   <!--<div class="container-fluid">--> 
+   <!--<div class="jumbotron" style="background-image: url(/view/fundament/vendor/images/intro_bg.jpg);">--> 
+   <!--<div class="container">--> 
+   <!--<h1>Hello, world! Ich heiße Distanbol.</h1>--> 
+   <!--<p>Application Description</p>--> 
+   <!--<a class="btn btn-main btn-outline-primary btn-sm" href="#" role="button">Read More</a>--> 
+   <!--</div>--> 
+   <!--</div>--> 
+   <!--</div>--> 
+   <div class="container"> 
+    <!--<div class="row">--> 
+    <!--<div class="col-md-12">--> 
+    <!--<h3 class="row-heading pb-2 mb-3 border-bottom"><i class="fas fa-plug"></i> Get Started</h3>--> 
+    <!--</div>--> 
+    <!--</div>--> 
+    <div class="row"> 
+     <div class="col-md-12"> 
+      <div class="card mb-4 box-shadow p-4"> 
+       <!-- 
+                    <h2>Source</h2>
+                    <div id="source"></div>
+
+                    <div class="form-group" id="textForm">
+                        <form action="/convert" method="POST">
+                            <label for="textInput">Source Text: </label>
+                            <textarea class="form-control" rows="9" id="textInput" name="input"></textarea>
+                            <label for="confidenceInputTEXT">Confidence(Optional):</label>
+                            <input type="text" class="form-control" id="confidenceInputTEXT" name="confidence"/>
+                            <input type="submit" class="btn btn-primary" value="submit"/>
+                        </form>
+                    </div>
+ --> 
+       <div id="fulltext"> 
+        <b>Source Text: </b> Madrid heizt den Konflikt um Katalonien an. Mit Rückendeckung der konservativen Machthaber in Europa. Albrecht Müller · Freitag den 3. November 2017 Die NachDenkSeiten haben bei Bericht, Analyse und Bewertung des Konfliktes zwischen den auf Separation zielenden Personen in Katalonien und der spanischen Zentralregierung versucht, beide Seiten zu verstehen. Wir sind gegen eine Abspaltung, weil wir die weitere Zergliederung Europas in kleinere Staaten für unsinnig halten. Und wir waren für Gespräche zwischen den Streithähnen. Die Ausreise oder Flucht – wie man das nennen will – des abgesetzten Katalonien- Präsidenten und einiger Minister nach Belgien war eine weitere Stufe der Eskalation. Die von einer Richterin angeordnete Untersuchungshaft ist die nächste und zugleich unnötige Eskalation. Zumindest bei den aus Belgien zurückgekehrten Ministern war das unnötig und wird die Stimmung in Katalonien anheizen. Albrecht Müller Hinter der Eskalation steckten und stecken auf beiden Seiten innenpolitische Erwägungen Die führenden Personen Kataloniens haben mit ihrem Nationalismus Korruption und Schwächen ihrer Politik überdeckt. Noch mehr gilt das vermutlich für die spanische Zentralregierung und ihren unsympathischen Ministerpräsidenten Rajoy. Er gewinnt mit jeder neuen Stufe der Eskalation auch an innenpolitischer Zustimmung. Es ist wie bei manchen Kriegen, die von Regierungen der westlichen Welt geführt worden sind und geführt werden. Thatcher stabilisierte mit dem Falklandkrieg ihre Macht in Großbritannien. George W. Bush versuchte es mit dem Irakkrieg und insgesamt mit dem Krieg gegen den sogenannten Terror. Jetzt muss der „Krieg“ zwischen den auf Trennung pochenden Katalanen und der Zentralregierung dafür herhalten, die Reihen zu schließen und so auch das jeweilige Versagen zu verdecken. Der dahinter steckende Geist ist auf beiden Seiten nationalistisch, an Feindbildern orientiert und reaktionär. Mich erinnert das an Berichte in einem Buch mit Zeitzeugen zum spanischen Bürgerkrieg, die ich gerade gelesen habe. Damals haben sich die Royalisten und Faschisten auf der einen Seite und die Anarchisten, Kommunisten und Sozialisten auf der anderen Seite rücksichtslos massakriert. Soweit ist es noch nicht. Aber vielleicht nicht allzu weit entfernt. Die konservativen Machthaber Europas decken die Konfrontation. Sie haben Rajoy letzthin bei einem Treffen volle Rückendeckung gegeben. So sind sie, unsere herrschenden Kreise. Und keine Bewegung der sogenannten hochgelobten Zivilgesellschaft Europas stoppt sie. Es ist wie beim Umgang mit den sogenannten Terroristen oder auch beim Umgang zwischen West und Ost, also mit Russland: Eskalation und Feindbild-Aufbau ist angesagt. 
+       </div> 
+       <!-- 
+                    <br>
+                    <div class="form-group" id="urlForm">
+                        <b>If you want to submit another example from a URL:</b>
+                        <br>
+                        <form action="/convert" method="GET">
+                            <label for="URLInput">URL:</label>
+                            <input type="text" class="form-control" id="URLInput" name="URL"/>
+                            <label for="confidenceInputURL">Confidence(Optional):</label>
+                            <input type="text" class="form-control" id="confidenceInputURL" name="confidence"/>
+                            <input type="submit" class="btn btn-primary" value="submit"/>
+                        </form>
+                    </div>
+ --> 
+       <h2>Overview</h2> 
+       <table> 
+        <thead> 
+         <tr> 
+          <th>Name</th> 
+          <th>Confidence</th> 
+          <th>Context</th> 
+          <th>Types</th> 
+         </tr> 
+        </thead> 
+        <tbody id="tableBody"> 
+         <!--Here comes the table elements--> 
+         <tr>
+          <td><a href="#http://dbpedia.org/resource/Belgium">Belgium</a></td>
+          <td>1.0</td>
+          <td> und einiger Minister nach Belgien war eine weitere Stufe der Eskalation. Die von</td>
+          <td>
+           <ul>
+            <li><a href="http://dbpedia.org/ontology/Country">http://dbpedia.org/ontology/Country</a><a></a></li>
+            <li><a href="http://dbpedia.org/ontology/Place">http://dbpedia.org/ontology/Place</a><a></a></li>
+            <li><a href="http://dbpedia.org/ontology/PopulatedPlace">http://dbpedia.org/ontology/PopulatedPlace</a><a></a></li>
+            <li><a href="http://schema.org/Country">http://schema.org/Country</a><a></a></li>
+            <li><a href="http://schema.org/Place">http://schema.org/Place</a><a></a></li>
+            <li><a href="http://www.opengis.net/gml/_Feature">http://www.opengis.net/gml/_Feature</a><a></a></li>
+            <li><a href="http://www.w3.org/2002/07/owl#Thing">http://www.w3.org/2002/07/owl#Thing</a><a></a></li>
+           </ul></td>
+         </tr>
+         <tr>
+          <td><a href="#http://dbpedia.org/resource/Catalonia">Catalonia</a></td>
+          <td>0.9090909090909091</td>
+          <td>Madrid heizt den Konflikt um Katalonien an. Mit Rückendeckung der konservativen</td>
+          <td>
+           <ul>
+            <li><a href="http://dbpedia.org/ontology/Place">http://dbpedia.org/ontology/Place</a><a></a></li>
+            <li><a href="http://dbpedia.org/ontology/PopulatedPlace">http://dbpedia.org/ontology/PopulatedPlace</a><a></a></li>
+            <li><a href="http://dbpedia.org/ontology/Settlement">http://dbpedia.org/ontology/Settlement</a><a></a></li>
+            <li><a href="http://schema.org/Place">http://schema.org/Place</a><a></a></li>
+            <li><a href="http://www.opengis.net/gml/_Feature">http://www.opengis.net/gml/_Feature</a><a></a></li>
+            <li><a href="http://www.w3.org/2002/07/owl#Thing">http://www.w3.org/2002/07/owl#Thing</a><a></a></li>
+           </ul></td>
+         </tr>
+         <tr>
+          <td><a href="#http://dbpedia.org/resource/Europe">Europe</a></td>
+          <td>1.0</td>
+          <td> der konservativen Machthaber in Europa. Albrecht Müller · Freitag den 3. November</td>
+          <td>
+           <ul>
+            <li><a href="http://dbpedia.org/ontology/Continent">http://dbpedia.org/ontology/Continent</a><a></a></li>
+            <li><a href="http://dbpedia.org/ontology/Place">http://dbpedia.org/ontology/Place</a><a></a></li>
+            <li><a href="http://dbpedia.org/ontology/PopulatedPlace">http://dbpedia.org/ontology/PopulatedPlace</a><a></a></li>
+            <li><a href="http://schema.org/Continent">http://schema.org/Continent</a><a></a></li>
+            <li><a href="http://schema.org/Place">http://schema.org/Place</a><a></a></li>
+            <li><a href="http://www.w3.org/2002/07/owl#Thing">http://www.w3.org/2002/07/owl#Thing</a><a></a></li>
+           </ul></td>
+         </tr>
+         <tr>
+          <td><a href="#http://dbpedia.org/resource/George_W._Bush">George W. Bush</a></td>
+          <td>1.0</td>
+          <td> Falklandkrieg ihre Macht in Großbritannien. George W. Bush versuchte es mit dem Irakkrieg und insgesamt</td>
+          <td>
+           <ul>
+            <li><a href="http://dbpedia.org/ontology/Agent">http://dbpedia.org/ontology/Agent</a><a></a></li>
+            <li><a href="http://dbpedia.org/ontology/OfficeHolder">http://dbpedia.org/ontology/OfficeHolder</a><a></a></li>
+            <li><a href="http://dbpedia.org/ontology/Person">http://dbpedia.org/ontology/Person</a><a></a></li>
+            <li><a href="http://schema.org/Person">http://schema.org/Person</a><a></a></li>
+            <li><a href="http://www.w3.org/2002/07/owl#Thing">http://www.w3.org/2002/07/owl#Thing</a><a></a></li>
+            <li><a href="http://xmlns.com/foaf/0.1/Person">http://xmlns.com/foaf/0.1/Person</a><a></a></li>
+           </ul></td>
+         </tr>
+         <tr>
+          <td><a href="#http://dbpedia.org/resource/Madrid">Madrid</a></td>
+          <td>1.0</td>
+          <td>Madrid heizt den Konflikt um Katalonien an. </td>
+          <td>
+           <ul>
+            <li><a href="http://dbpedia.org/ontology/Place">http://dbpedia.org/ontology/Place</a><a></a></li>
+            <li><a href="http://dbpedia.org/ontology/PopulatedPlace">http://dbpedia.org/ontology/PopulatedPlace</a><a></a></li>
+            <li><a href="http://dbpedia.org/ontology/Settlement">http://dbpedia.org/ontology/Settlement</a><a></a></li>
+            <li><a href="http://schema.org/Place">http://schema.org/Place</a><a></a></li>
+            <li><a href="http://www.opengis.net/gml/_Feature">http://www.opengis.net/gml/_Feature</a><a></a></li>
+            <li><a href="http://www.w3.org/2002/07/owl#Thing">http://www.w3.org/2002/07/owl#Thing</a><a></a></li>
+           </ul></td>
+         </tr>
+        </tbody> 
+       </table> 
+       <h2>Map Locations</h2> 
+       <div id="map" class="map"> 
+       </div> 
+       <br> 
+       <h2>Information</h2> 
+       <div id="viewables">   
+        <meta charset="UTF-8">   
+        <div> 
+         <a id="id" name="http://dbpedia.org/resource/Belgium"><b>Id:</b> 
+          <!--idContent-->http://dbpedia.org/resource/Belgium</a> 
+        </div> 
+        <div id="label"> 
+         <b>Label: </b> 
+         <!--labelContent-->Belgium 
+        </div> 
+        <div id="comment"> 
+         <b>Comment: </b> 
+         <!--commentContent-->Belgium, officially the Kingdom of Belgium, is a federal state in Western Europe. It is a founding member of the European Union and hosts the EU's headquarters, and those of several other major international organisations such as NATO. Belgium covers an area of 30,528 square kilometres (11,787&nbsp;sq&nbsp;mi), and it has a population of about 11&nbsp;million people. 
+        </div> 
+        <div id="confidence"> 
+         <b>Confidence: </b> 
+         <!--confidenceContent-->1.0 
+        </div> 
+        <div id="context"> 
+         <b>Context: </b> 
+         <!--contextContent--> und einiger Minister nach Belgien war eine weitere Stufe der Eskalation. Die von 
+        </div> 
+        <div id="types"> 
+         <b>Types: </b> 
+         <!--typesContent--> 
+         <div> 
+          <b>Types:</b> 
+          <ul> 
+           <li><a href="http://dbpedia.org/ontology/Country">http://dbpedia.org/ontology/Country</a><a></a></li> 
+           <li><a href="http://dbpedia.org/ontology/Place">http://dbpedia.org/ontology/Place</a><a></a></li> 
+           <li><a href="http://dbpedia.org/ontology/PopulatedPlace">http://dbpedia.org/ontology/PopulatedPlace</a><a></a></li> 
+           <li><a href="http://schema.org/Country">http://schema.org/Country</a><a></a></li> 
+           <li><a href="http://schema.org/Place">http://schema.org/Place</a><a></a></li> 
+           <li><a href="http://www.opengis.net/gml/_Feature">http://www.opengis.net/gml/_Feature</a><a></a></li> 
+           <li><a href="http://www.w3.org/2002/07/owl#Thing">http://www.w3.org/2002/07/owl#Thing</a><a></a></li> 
+          </ul> 
+         </div> 
+        </div> 
+        <div> 
+         <b>Depiction: <a id="fullImageLink" href="http://upload.wikimedia.org/wikipedia/commons/6/65/Flag_of_Belgium.svg">full image</a></b> 
+         <div> 
+          <img id="thumbnailLink" src="http://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Flag_of_Belgium.svg/200px-Flag_of_Belgium.svg.png"> 
+         </div> 
+        </div> 
+        <div id="coordinates"> 
+         <coordinate> 
+          <long>
+            4.35 
+          </long> 
+          <lat>
+            50.85 
+          </lat> 
+         </coordinate> 
+        </div>  
+        <hr>   
+        <meta charset="UTF-8">   
+        <div> 
+         <a id="id" name="http://dbpedia.org/resource/Catalonia"><b>Id:</b> 
+          <!--idContent-->http://dbpedia.org/resource/Catalonia</a> 
+        </div> 
+        <div id="label"> 
+         <b>Label: </b> 
+         <!--labelContent-->Catalonia 
+        </div> 
+        <div id="comment"> 
+         <b>Comment: </b> 
+         <!--commentContent-->Catalonia is an autonomous region of Spain in the north-east of the Iberian Peninsula, with the official status of a "nationality". Catalonia comprises four provinces: Barcelona, Girona, Lleida, and Tarragona. Its capital and largest city is Barcelona which is the second largest Spanish city by population after Madrid. Catalonia covers an area of 32,114&nbsp;km² and has an official population of 7,535,251. Its borders essentially reflect those of the former Principality of Catalonia. 
+        </div> 
+        <div id="confidence"> 
+         <b>Confidence: </b> 
+         <!--confidenceContent-->0.9090909090909091 
+        </div> 
+        <div id="context"> 
+         <b>Context: </b> 
+         <!--contextContent-->Madrid heizt den Konflikt um Katalonien an. Mit Rückendeckung der konservativen 
+        </div> 
+        <div id="types"> 
+         <b>Types: </b> 
+         <!--typesContent--> 
+         <div> 
+          <b>Types:</b> 
+          <ul> 
+           <li><a href="http://dbpedia.org/ontology/Place">http://dbpedia.org/ontology/Place</a><a></a></li> 
+           <li><a href="http://dbpedia.org/ontology/PopulatedPlace">http://dbpedia.org/ontology/PopulatedPlace</a><a></a></li> 
+           <li><a href="http://dbpedia.org/ontology/Settlement">http://dbpedia.org/ontology/Settlement</a><a></a></li> 
+           <li><a href="http://schema.org/Place">http://schema.org/Place</a><a></a></li> 
+           <li><a href="http://www.opengis.net/gml/_Feature">http://www.opengis.net/gml/_Feature</a><a></a></li> 
+           <li><a href="http://www.w3.org/2002/07/owl#Thing">http://www.w3.org/2002/07/owl#Thing</a><a></a></li> 
+          </ul> 
+         </div> 
+        </div> 
+        <div> 
+         <b>Depiction: <a id="fullImageLink" href="http://upload.wikimedia.org/wikipedia/commons/c/ce/Flag_of_Catalonia.svg">full image</a></b> 
+         <div> 
+          <img id="thumbnailLink" src="http://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Flag_of_Catalonia.svg/200px-Flag_of_Catalonia.svg.png"> 
+         </div> 
+        </div> 
+        <div id="coordinates"> 
+         <coordinate> 
+          <long>
+            1.4666667 
+          </long> 
+          <lat>
+            41.816666 
+          </lat> 
+         </coordinate> 
+        </div>  
+        <hr>   
+        <meta charset="UTF-8">   
+        <div> 
+         <a id="id" name="http://dbpedia.org/resource/Europe"><b>Id:</b> 
+          <!--idContent-->http://dbpedia.org/resource/Europe</a> 
+        </div> 
+        <div id="label"> 
+         <b>Label: </b> 
+         <!--labelContent-->Europe 
+        </div> 
+        <div id="comment"> 
+         <b>Comment: </b> 
+         <!--commentContent-->Europe is, by convention, one of the world's seven continents. Comprising the westernmost peninsula of Eurasia, Europe is generally 'divided' from Asia to its east by the watershed divides of the Ural and Caucasus Mountains, the Ural River, the Caspian and Black Seas, and the waterways connecting the Black and Aegean Seas. 
+        </div> 
+        <div id="confidence"> 
+         <b>Confidence: </b> 
+         <!--confidenceContent-->1.0 
+        </div> 
+        <div id="context"> 
+         <b>Context: </b> 
+         <!--contextContent--> der konservativen Machthaber in Europa. Albrecht Müller · Freitag den 3. November 
+        </div> 
+        <div id="types"> 
+         <b>Types: </b> 
+         <!--typesContent--> 
+         <div> 
+          <b>Types:</b> 
+          <ul> 
+           <li><a href="http://dbpedia.org/ontology/Continent">http://dbpedia.org/ontology/Continent</a><a></a></li> 
+           <li><a href="http://dbpedia.org/ontology/Place">http://dbpedia.org/ontology/Place</a><a></a></li> 
+           <li><a href="http://dbpedia.org/ontology/PopulatedPlace">http://dbpedia.org/ontology/PopulatedPlace</a><a></a></li> 
+           <li><a href="http://schema.org/Continent">http://schema.org/Continent</a><a></a></li> 
+           <li><a href="http://schema.org/Place">http://schema.org/Place</a><a></a></li> 
+           <li><a href="http://www.w3.org/2002/07/owl#Thing">http://www.w3.org/2002/07/owl#Thing</a><a></a></li> 
+          </ul> 
+         </div> 
+        </div> 
+        <div> 
+         <b>Depiction: <a id="fullImageLink" href="http://upload.wikimedia.org/wikipedia/commons/d/de/Europe_orthographic_Caucasus_Urals_boundary.svg">full image</a></b> 
+         <div> 
+          <img id="thumbnailLink" src="http://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Europe_orthographic_Caucasus_Urals_boundary.svg/200px-Europe_orthographic_Caucasus_Urals_boundary.svg.png"> 
+         </div> 
+        </div> 
+        <div id="coordinates"></div>  
+        <hr>   
+        <meta charset="UTF-8">   
+        <div> 
+         <a id="id" name="http://dbpedia.org/resource/George_W._Bush"><b>Id:</b> 
+          <!--idContent-->http://dbpedia.org/resource/George_W._Bush</a> 
+        </div> 
+        <div id="label"> 
+         <b>Label: </b> 
+         <!--labelContent-->George W. Bush 
+        </div> 
+        <div id="comment"> 
+         <b>Comment: </b> 
+         <!--commentContent-->George Walker Bush (born July 6, 1946) is an American politician and businessman who was the 43rd President of the United States from 2001 to 2009 and the 46th Governor of Texas from 1995 to 2000. The eldest son of Barbara Bush and George H. W. Bush, he was born in New Haven, Connecticut. After graduating from Yale University in 1968 and Harvard Business School in 1975, Bush worked in oil businesses. 
+        </div> 
+        <div id="confidence"> 
+         <b>Confidence: </b> 
+         <!--confidenceContent-->1.0 
+        </div> 
+        <div id="context"> 
+         <b>Context: </b> 
+         <!--contextContent--> Falklandkrieg ihre Macht in Großbritannien. George W. Bush versuchte es mit dem Irakkrieg und insgesamt 
+        </div> 
+        <div id="types"> 
+         <b>Types: </b> 
+         <!--typesContent--> 
+         <div> 
+          <b>Types:</b> 
+          <ul> 
+           <li><a href="http://dbpedia.org/ontology/Agent">http://dbpedia.org/ontology/Agent</a><a></a></li> 
+           <li><a href="http://dbpedia.org/ontology/OfficeHolder">http://dbpedia.org/ontology/OfficeHolder</a><a></a></li> 
+           <li><a href="http://dbpedia.org/ontology/Person">http://dbpedia.org/ontology/Person</a><a></a></li> 
+           <li><a href="http://schema.org/Person">http://schema.org/Person</a><a></a></li> 
+           <li><a href="http://www.w3.org/2002/07/owl#Thing">http://www.w3.org/2002/07/owl#Thing</a><a></a></li> 
+           <li><a href="http://xmlns.com/foaf/0.1/Person">http://xmlns.com/foaf/0.1/Person</a><a></a></li> 
+          </ul> 
+         </div> 
+        </div> 
+        <div> 
+         <b>Depiction: <a id="fullImageLink" href="http://upload.wikimedia.org/wikipedia/commons/d/d4/George-W-Bush.jpeg">full image</a></b> 
+         <div> 
+          <img id="thumbnailLink" src="http://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/George-W-Bush.jpeg/200px-George-W-Bush.jpeg"> 
+         </div> 
+        </div> 
+        <div id="coordinates"></div>  
+        <hr>   
+        <meta charset="UTF-8">   
+        <div> 
+         <a id="id" name="http://dbpedia.org/resource/Madrid"><b>Id:</b> 
+          <!--idContent-->http://dbpedia.org/resource/Madrid</a> 
+        </div> 
+        <div id="label"> 
+         <b>Label: </b> 
+         <!--labelContent-->Madrid 
+        </div> 
+        <div id="comment"> 
+         <b>Comment: </b> 
+         <!--commentContent-->Madrid is the capital and largest city of Spain. The population of the city is roughly 3.3&nbsp;million and the entire population of the Madrid metropolitan area is calculated to be 6.271 million. It is the third largest city in the European Union, after London and Berlin, and its metropolitan area is the third largest in the European Union after London and Paris. The city spans a total of 604.3&nbsp;km (233.3&nbsp;sq&nbsp;mi). 
+        </div> 
+        <div id="confidence"> 
+         <b>Confidence: </b> 
+         <!--confidenceContent-->1.0 
+        </div> 
+        <div id="context"> 
+         <b>Context: </b> 
+         <!--contextContent-->Madrid heizt den Konflikt um Katalonien an. 
+        </div> 
+        <div id="types"> 
+         <b>Types: </b> 
+         <!--typesContent--> 
+         <div> 
+          <b>Types:</b> 
+          <ul> 
+           <li><a href="http://dbpedia.org/ontology/Place">http://dbpedia.org/ontology/Place</a><a></a></li> 
+           <li><a href="http://dbpedia.org/ontology/PopulatedPlace">http://dbpedia.org/ontology/PopulatedPlace</a><a></a></li> 
+           <li><a href="http://dbpedia.org/ontology/Settlement">http://dbpedia.org/ontology/Settlement</a><a></a></li> 
+           <li><a href="http://schema.org/Place">http://schema.org/Place</a><a></a></li> 
+           <li><a href="http://www.opengis.net/gml/_Feature">http://www.opengis.net/gml/_Feature</a><a></a></li> 
+           <li><a href="http://www.w3.org/2002/07/owl#Thing">http://www.w3.org/2002/07/owl#Thing</a><a></a></li> 
+          </ul> 
+         </div> 
+        </div> 
+        <div> 
+         <b>Depiction: <a id="fullImageLink" href="http://upload.wikimedia.org/wikipedia/commons/e/e6/CollageMadrid.jpg">full image</a></b> 
+         <div> 
+          <img id="thumbnailLink" src="http://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/CollageMadrid.jpg/200px-CollageMadrid.jpg"> 
+         </div> 
+        </div> 
+        <div id="coordinates"> 
+         <coordinate> 
+          <long>
+            -3.6833334 
+          </long> 
+          <lat>
+            40.383335 
+          </lat> 
+         </coordinate> 
+        </div>  
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div>
+   <!-- /container --> 
+  </main> 
+  <footer class="main-footer"> 
+   <div class="container"> 
+    <div class="footer-wrapper"> 
+     <div class="footer-sep"> 
+      <i class="far fa-comment"></i> CONTACT 
+     </div> 
+     <div class="row"> 
+      <div class="col-md-1 pl-0"> 
+       <a href="https://www.oeaw.ac.at/acdh/acdh-home/" target="_blank" rel="noopener" aria-label="ACDH"> <img src="./view/fundament/vendor/images/acdh_logo.png" alt="ACDH" title="Austrian Center for Digital Humanities"> </a> 
+      </div> 
+      <div class="col-md-4"> 
+       <p> ACDH-ÖAW <br> Austrian Centre for Digital Humanities <br> Austrian Academy of Sciences </p> 
+       <p> Sonnenfelsgasse 19, <br> 1010 Vienna </p> 
+       <p> T: +43 1 51581-2200 <br> E: <a href="javascript:linkTo_UnCryptMailto('nbjmup;bdeiApfbx/bd/bu');">acdh(at)oeaw.ac.at</a> </p> 
+      </div> 
+      <div class="col-md-3 ml-auto"> 
+       <h3>HELPDESK</h3> 
+       <p>ACDH runs a helpdesk offering advice for questions related to various digital humanities topics.</p> 
+       <p><a class="helpdesk-button" href="javascript:linkTo_UnCryptMailto('nbjmup;bdeiApfbx/bd/bu');">ASK US!</a></p> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="footer-imprint-bar">
+     © Copyright OEAW | 
+    <a href="https://arche.acdh.oeaw.ac.at/browser/imprint">Impressum/Imprint</a> 
+   </div> 
+  </footer> 
+  <!-- Fundament core JavaScript --> 
+  <!-- Placed at the end of the document so the pages load faster --> 
+  <script defer src="./view/fundament/vendor/js/fontawesome-all.min.js"></script> 
+  <script src="./view/fundament/vendor/js/jquery.min.js"></script> 
+  <script src="./view/fundament/js/fundament.min.js"></script> 
+  <script src="https://openlayers.org/en/v4.6.4/build/ol.js"></script> 
+  <script src="./view/javascript/distanbol.js"></script>   
+ </body>
+</html>

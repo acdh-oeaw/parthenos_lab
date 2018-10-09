@@ -6,10 +6,14 @@ futher on published by the Web App Publisher. The output of the whole applicatio
 
 ## how it works
 As every SAI deployable Java application the sai_stanbol_wrapper is a stand alone application, packed into a jar. The call is: 
-`java -cp <name of the jar> at.ac.oeaw.acdh.parthenos_lab.nlpchain.Main <input file> <minimum confidence level>`
+`java -cp <name of the jar> at.ac.oeaw.acdh.parthenos_lab.nlpchain.Main <input file> <enhancement chain> <minimum confidence level>`
 
 `<input file>`
 Fully qualified path to the input file (or relative to the working directory)
+
+`<enhancement chain>`
+The enhancement chain to use. Currently the are the options COUNTRIES (leads to enhancement chain *geoNames_PCLI), CITIES ( *geoNames_PPLC* ) and LOCATIONS 
+( *geoNames_SPAsubset* ). Any other value will lead to the enhancement chain *dbpedia-fst-linking*. 
 
 `<minimum confidence level>`
 A minimum confidence level between 0 (show everything) and 1.

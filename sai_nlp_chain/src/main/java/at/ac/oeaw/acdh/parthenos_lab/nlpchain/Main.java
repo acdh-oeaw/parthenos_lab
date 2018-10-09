@@ -18,8 +18,8 @@ import at.ac.oeaw.acdh.parthenos_lab.nlpchain.helpers.GlobalVariables;
 public class Main {
 
     public static void main(String[] args) {
-        if(args.length != 2) {
-            System.out.println("java -cp <name of jar> at.ac.oeaw.acdh.parthenos_lab.nlpchain.Main <text file to enrich> <minimum confidence level");
+        if(args.length != 3) {
+            System.out.println("java -cp <name of jar> at.ac.oeaw.acdh.parthenos_lab.nlpchain.Main <text file to enrich> <enhancement chain> <minimum confidence level");
             System.exit(1);
         }
         

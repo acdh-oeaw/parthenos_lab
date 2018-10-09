@@ -1,4 +1,4 @@
-#sai_stanbol_wrapper
+# sai_stanbol_wrapper
 
 ## purpose
 The purpose of the project is to stream an text input file to an external Stanbol installation, make a text enhancement and to return an enhanced output file. 

@@ -15,5 +15,5 @@ Fully qualified path to the input file (or relative to the working directory). T
 `<minimum confidence level>`
 A minimum confidence level between 0 (show everything) and 1
 
-** The sai_distanbol project is a fork of the Distanbol project, written by coy123 and published on github (see https://github.com/acdh-oeaw/Distanbol). ** 
+**The sai_distanbol project is a fork of the Distanbol project, written by coy123 and published on github (see https://github.com/acdh-oeaw/Distanbol).** 
 

@@ -8,7 +8,7 @@ As every SAI deployable Java application the sai_stanbol_wrapper is a stand alon
 `java -cp <name of the jar> at.ac.oeaw.acdh.nerlix.stanbol.SAIStanbolWrapper <input file> <enhancement chain> <output format>`
 
 `<input file>`
-Fully qualified path to the input file (or realtive to the working directory)
+Fully qualified path to the input file (or relative to the working directory)
 
 `<enhancement chain>`
 The enhancement chain to use. Currently the are the options COUNTRIES (leads to enhancement chain *geoNames_PCLI), CITIES ( *geoNames_PPLC* ) and LOCATIONS 

@@ -13,7 +13,7 @@ As every SAI deployable Java application the sai_distanbol is a stand alone appl
 Fully qualified path to the input file (or relative to the working directory). The input file is a json formated output file from the sai_stanbol_wrapper. 
 
 `<minimum confidence level>`
-A minimum confidence level between 0 (show everything) and 1
+A minimum confidence level between 0 (show everything) and 1.
 
 **The sai_distanbol project is a fork of the Distanbol project, written by coy123 and published on github (see https://github.com/acdh-oeaw/Distanbol).** 
 

@@ -3,7 +3,6 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>at.ac.oeaw.acdh.nerlix.stanbol</groupId>
 	<artifactId>sai_distanbol</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
 	<dependencies>
 		<dependency>
 			<groupId>com.fasterxml.jackson.core</groupId>
@@ -17,7 +16,6 @@
 		</dependency>
 	</dependencies>
 	<build>
-		<finalName>Distanbol</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -52,4 +50,5 @@
 		</plugins>
 
 	</build>
+	<version>1.1</version>
 </project>

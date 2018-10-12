@@ -10,7 +10,7 @@ public class EntityEnhancement {
 
     private String reference;
     private Double confidence;
-    private List<String> relations = new ArrayList<String>();
+    private List<String> relations = new ArrayList<>();
 
     public EntityEnhancement(JsonNode node) {
         String reference;

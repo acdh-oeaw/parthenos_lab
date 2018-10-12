@@ -52,7 +52,7 @@ public class SAIDistanbol {
         
         try{
             confidenceLevel = Double.parseDouble(args[1]);
-            if(confidenceLevel <= 0 || confidenceLevel > 1)
+            if(confidenceLevel < 0 || confidenceLevel > 1)
                 throw new Exception();
         }
         catch(Exception ex) {

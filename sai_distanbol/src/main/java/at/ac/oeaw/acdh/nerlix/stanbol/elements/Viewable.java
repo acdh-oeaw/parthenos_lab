@@ -8,9 +8,11 @@ import at.ac.oeaw.acdh.nerlix.stanbol.enhancements.TextEnhancement;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
 
-import java.io.File;
 import java.io.IOException;
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -26,6 +28,7 @@ public class Viewable {
     private String latitude;
     private String longitude;
 
+    private final DecimalFormat numberFormatter = new DecimalFormat("###.##");
 
     private EntityEnhancement entityEnhancement;
     private List<TextEnhancement> textEnhancements = new ArrayList<>();
@@ -102,8 +105,8 @@ public class Viewable {
     public String getHTMLDepiction(String viewableTemplatePath) throws IOException {
         Document doc = Jsoup.parse(this.getClass().getClassLoader().getResourceAsStream(viewableTemplatePath), "utf-8", "");
 
-        doc.body().getElementById("id").attr("name", getId());
-        doc.body().getElementById("id").append(getId());
+        doc.body().getElementById("anchor").attr("name", getId());
+        doc.body().getElementById("id").append("<a href='" + getId() + "'>" + getId() + "</a>");
         doc.body().getElementById("label").append(getLabel());
 
         if (getComment() != null) {
@@ -112,13 +115,22 @@ public class Viewable {
             doc.body().getElementById("comment").attr("class", "hidden");
         }
 
-        doc.body().getElementById("confidence").append(String.valueOf(getEntityEnhancement().getConfidence()));
-        doc.body().getElementById("context").append(getTextEnhancements().get(0).getContext());
+        doc.body().getElementById("confidence").append(numberFormatter.format(getConfidence()));
+        doc.body().getElementById("context").append(getContext());
 
-        doc.body().getElementById("types").append("<div><b>Types:</b>" + getTypesHTML() + "</div");
+        doc.body().getElementById("types").append(getTypesHTML());
 
-        doc.body().getElementById("fullImageLink").attr("href", getDepiction());
-        doc.body().getElementById("thumbnailLink").attr("src", getDepictionThumbnail());
+        if (getDepiction() == null && getDepictionThumbnail() == null) {
+            Element depiction = doc.body().getElementById("depiction");
+            for (Element child : depiction.children()) {
+                child.remove();
+            }
+            depiction.append("<div><img id='thumbnailLink' src='/view/image/noImage.png'/></div>");
+        } else {
+            doc.body().getElementById("fullImageLink").attr("href", getDepiction());
+            doc.body().getElementById("thumbnailLink").attr("src", getDepictionThumbnail());
+        }
+
 
         if (getLongitude() != null && getLatitude() != null) {
             String coordinates = "<coordinate><long>" + getLongitude() + "</long><lat>" + getLatitude() + "</lat></coordinate>";
@@ -129,14 +141,21 @@ public class Viewable {
 
     public String getHTMLTableRowDepiction() throws IOException {
         StringBuilder sb = new StringBuilder();
-        sb.append("<tr>");
+        double confidence = getConfidence();
+        if(confidence<0.35){
+            sb.append("<tr class='danger'>");
+        }else if(confidence<0.7){
+            sb.append("<tr class='warning'>");
+        }else{
+            sb.append("<tr class='success'>");
+        }
 
         //name
         sb.append("<td><a href='#").append(getId()).append("'>").append(getLabel()).append("</a></td>");
         //confidence
-        sb.append("<td>").append(getEntityEnhancement().getConfidence()).append("</td>");
+        sb.append("<td>").append(numberFormatter.format(confidence)).append("</td>");
         //context
-        sb.append("<td>").append(getTextEnhancements().get(0).getContext()).append("</td>");
+        sb.append("<td>").append(getContext()).append("</td>");
         //types
         sb.append("<td>").append(getTypesHTML()).append("</td>");
 
@@ -149,10 +168,18 @@ public class Viewable {
         ArrayList<String> types = getTypes();
         if ((types != null) && (!types.isEmpty())) {
             StringBuilder sb = new StringBuilder();
+            boolean first = true;
             for (String type : types) {
-                sb.append("<li><a href='").append(type).append("'>").append(type).append("<a></li>");
+                if (!first) {
+                    sb.append(", ");
+                } else {
+                    first = false;
+                }
+                String[] typeSplit = type.split("/");
+                String typeLabel = typeSplit[typeSplit.length - 1];
+                sb.append("<a href='").append(type).append("'>").append(typeLabel).append("</a>");
             }
-            typesHTML = "<ul>" + sb.toString() + "</ul>";
+            typesHTML = sb.toString();
         } else {
             typesHTML = "This entity has no known types.";
         }
@@ -219,6 +246,11 @@ public class Viewable {
         return entityEnhancement;
     }
 
+    public double getConfidence() {
+        return getEntityEnhancement().getConfidence();
+
+    }
+
     public void setEntityEnhancement(EntityEnhancement entityEnhancement) {
         this.entityEnhancement = entityEnhancement;
     }
@@ -229,6 +261,19 @@ public class Viewable {
 
     public List<TextEnhancement> getTextEnhancements() {
         return textEnhancements;
+    }
+
+    public String getContext() {
+        TextEnhancement enhancement = getTextEnhancements().get(0);
+
+        String selectedText = enhancement.getSelectedText();
+        String context = enhancement.getContext();
+
+        if (selectedText != null) {
+            context = context.replaceAll("\\b" + selectedText + "\\b", "<span class='yellowText'>" + selectedText + "</span>");
+        }
+
+        return context;
     }
 
     public String getDepictionThumbnail() {
